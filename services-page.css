@@ -1,0 +1,163 @@
+.services-main {
+  width: min(1120px, 92vw);
+  margin: 0 auto;
+  padding: 3rem 0 5rem;
+}
+
+.services-hero,
+.service-item,
+.quote-cta {
+  border-radius: 1rem;
+}
+
+.services-hero {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  padding: clamp(1rem, 2vw, 1.5rem);
+}
+
+.services-hero h1 {
+  margin-top: 0.55rem;
+  font-size: clamp(2.6rem, 6vw, 4.6rem);
+}
+
+.services-hero p {
+  margin-top: 0.45rem;
+  color: var(--muted);
+  max-width: 65ch;
+}
+
+.services-list {
+  margin-top: 1.4rem;
+  display: grid;
+  gap: 0.95rem;
+}
+
+.service-item {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 1rem;
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  padding: 0.85rem;
+}
+
+.service-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 0.82rem;
+}
+
+.services-main h2 {
+  font-size: clamp(1.7rem, 3vw, 2.5rem);
+}
+
+.service-item ul {
+  margin: 0.6rem 0 0;
+  padding-left: 1.1rem;
+  color: var(--muted);
+}
+
+.services-main p,
+.services-main li {
+  line-height: 1.75;
+}
+
+.quote-cta {
+  margin-top: 1.2rem;
+  background: var(--accent);
+  border: 1px solid var(--cta-strong-border);
+  padding: clamp(1rem, 2vw, 1.5rem);
+  color: var(--white);
+}
+
+.quote-cta p {
+  margin-top: 0.45rem;
+  color: var(--cta-soft-text);
+}
+
+.quote-cta .contact-form {
+  margin-top: 0.9rem;
+  background: var(--bg-soft);
+}
+
+@media (max-width: 980px) {
+  .services-main {
+    width: 94vw;
+    padding: 2.1rem 0 3.2rem;
+  }
+
+  .services-hero h1 {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .service-item,
+  .quote-cta .contact-form {
+    grid-template-columns: 1fr;
+  }
+
+  .service-item {
+    padding: 0.72rem;
+  }
+
+  .service-item img {
+    height: 210px;
+  }
+}
+
+@media (max-width: 640px) {
+  .services-hero h1 {
+    font-size: clamp(1.82rem, 9.4vw, 2.35rem);
+  }
+
+  .service-item img {
+    height: 190px;
+  }
+}
+
+@media (max-width: 430px) {
+  .services-main {
+    width: 95vw;
+    padding: 1.8rem 0 2.8rem;
+  }
+
+  .services-hero h1 {
+    font-size: clamp(1.74rem, 9.8vw, 2.2rem);
+  }
+}
+
+@media (max-width: 380px) {
+  .services-hero h1 {
+    font-size: clamp(1.58rem, 10.2vw, 2rem);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .services-main {
+    width: 93vw;
+    padding: 2.4rem 0 3.6rem;
+  }
+
+  .services-hero h1 {
+    font-size: clamp(2.25rem, 5.4vw, 3.25rem);
+  }
+}
+
+.service-item {
+  box-shadow: none;
+  transition: border-color 0.24s ease;
+}
+
+.service-item:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.service-item img {
+  transition: transform 0.6s ease;
+}
+
+.service-item:hover img {
+  transform: none;
+}

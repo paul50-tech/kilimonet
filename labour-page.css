@@ -1,0 +1,136 @@
+.labour-main {
+  width: min(1120px, 92vw);
+  margin: 0 auto;
+  padding: 3rem 0 5rem;
+}
+
+.labour-hero,
+.how-it-works,
+.what-you-get,
+.request-form-block {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  padding: clamp(1rem, 2vw, 1.5rem);
+}
+
+.how-it-works,
+.what-you-get,
+.request-form-block {
+  margin-top: 1.4rem;
+}
+
+.labour-hero h1 {
+  margin-top: 0.55rem;
+  font-size: clamp(2.6rem, 6vw, 4.6rem);
+}
+
+.labour-main h2 {
+  font-size: clamp(1.7rem, 3vw, 2.5rem);
+}
+
+.steps-grid {
+  margin-top: 0.85rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.step-card {
+  border: 1px solid var(--line);
+  border-radius: 0.9rem;
+  padding: 0.85rem;
+  background: var(--bg-soft);
+}
+
+.step-card span {
+  width: 1.9rem;
+  height: 1.9rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--white);
+  font-weight: 800;
+}
+
+.labour-main p,
+.labour-main li {
+  line-height: 1.75;
+  color: var(--muted);
+}
+
+.what-you-get ul {
+  padding-left: 1.1rem;
+}
+
+@media (max-width: 980px) {
+  .labour-main {
+    width: 94vw;
+    padding: 2.1rem 0 3.2rem;
+  }
+
+  .labour-hero h1 {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .steps-grid,
+  .request-form-block .contact-form {
+    grid-template-columns: 1fr;
+  }
+
+  .step-card {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .labour-hero h1 {
+    font-size: clamp(1.82rem, 9.4vw, 2.35rem);
+  }
+}
+
+@media (max-width: 430px) {
+  .labour-main {
+    width: 95vw;
+    padding: 1.8rem 0 2.8rem;
+  }
+
+  .labour-hero h1 {
+    font-size: clamp(1.74rem, 9.8vw, 2.2rem);
+  }
+}
+
+@media (max-width: 380px) {
+  .labour-hero h1 {
+    font-size: clamp(1.58rem, 10.2vw, 2rem);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .labour-main {
+    width: 93vw;
+    padding: 2.4rem 0 3.6rem;
+  }
+
+  .labour-hero h1 {
+    font-size: clamp(2.25rem, 5.4vw, 3.25rem);
+  }
+}
+
+.step-card,
+.how-it-works,
+.what-you-get,
+.request-form-block {
+  box-shadow: none;
+}
+
+.step-card {
+  transition: border-color 0.24s ease;
+}
+
+.step-card:hover {
+  transform: none;
+  box-shadow: none;
+}

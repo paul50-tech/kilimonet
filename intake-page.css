@@ -1,0 +1,117 @@
+.intake-main {
+  width: min(980px, 92vw);
+  margin: 0 auto;
+  padding: 3rem 0 5rem;
+}
+
+.intake-hero,
+.intake-form-wrap {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  padding: clamp(1rem, 2vw, 1.5rem);
+  box-shadow: none;
+}
+
+.intake-form-wrap {
+  margin-top: 1.4rem;
+  transition: box-shadow 0.24s ease;
+}
+
+.intake-hero h1 {
+  margin-top: 0.55rem;
+  font-size: clamp(2.6rem, 6vw, 4.6rem);
+}
+
+.intake-hero p {
+  margin-top: 0.45rem;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.contact-form.full {
+  margin-top: 0;
+  grid-template-columns: 1fr 1fr;
+}
+
+.contact-form.full label:last-of-type,
+.contact-form.full button {
+  grid-column: 1 / -1;
+}
+
+select {
+  font: inherit;
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border-radius: 0.6rem;
+  border: 1px solid var(--input-line);
+  background: var(--bg-soft);
+}
+
+select:focus {
+  outline: 2px solid var(--accent-soft);
+  outline-offset: 1px;
+}
+
+.intake-confirmation {
+  margin: 0.8rem 0 0;
+  padding: 0.7rem 0.8rem;
+  border-radius: 0.7rem;
+  border: 1px solid var(--accent-soft);
+  background: var(--success-bg);
+  color: var(--accent-deep);
+  font-weight: 700;
+}
+
+@media (max-width: 980px) {
+  .intake-main {
+    width: 94vw;
+    padding: 2.1rem 0 3.2rem;
+  }
+
+  .intake-hero h1 {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .contact-form.full {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .intake-hero h1 {
+    font-size: clamp(1.82rem, 9.4vw, 2.35rem);
+  }
+}
+
+@media (max-width: 430px) {
+  .intake-main {
+    width: 95vw;
+    padding: 1.8rem 0 2.8rem;
+  }
+
+  .intake-hero h1 {
+    font-size: clamp(1.74rem, 9.8vw, 2.2rem);
+  }
+}
+
+@media (max-width: 380px) {
+  .intake-hero h1 {
+    font-size: clamp(1.58rem, 10.2vw, 2rem);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .intake-main {
+    width: 93vw;
+    padding: 2.4rem 0 3.6rem;
+  }
+
+  .intake-hero h1 {
+    font-size: clamp(2.25rem, 5.4vw, 3.25rem);
+  }
+}
+
+.intake-form-wrap:focus-within {
+  box-shadow: none;
+}

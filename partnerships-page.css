@@ -1,0 +1,120 @@
+.partnerships-main {
+  width: min(1120px, 92vw);
+  margin: 0 auto;
+  padding: 3rem 0 5rem;
+}
+
+.partnerships-hero,
+.partners-block,
+.models-block,
+.propose-block {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  padding: clamp(1rem, 2vw, 1.5rem);
+}
+
+.partners-block,
+.models-block,
+.propose-block {
+  margin-top: 1.4rem;
+}
+
+.partnerships-hero h1 {
+  margin-top: 0.55rem;
+  font-size: clamp(2.6rem, 6vw, 4.6rem);
+}
+
+.partnerships-main h2 {
+  font-size: clamp(1.7rem, 3vw, 2.5rem);
+}
+
+.partnerships-main p,
+.partnerships-main li {
+  line-height: 1.75;
+  color: var(--muted);
+}
+
+.models-grid {
+  margin-top: 0.9rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.model-tile {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: 0.9rem;
+  padding: 0.9rem;
+}
+
+@media (max-width: 980px) {
+  .partnerships-main {
+    width: 94vw;
+    padding: 2.1rem 0 3.2rem;
+  }
+
+  .partnerships-hero h1 {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .models-grid,
+  .propose-block .contact-form {
+    grid-template-columns: 1fr;
+  }
+
+  .model-tile {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .partnerships-hero h1 {
+    font-size: clamp(1.82rem, 9.4vw, 2.35rem);
+  }
+}
+
+@media (max-width: 430px) {
+  .partnerships-main {
+    width: 95vw;
+    padding: 1.8rem 0 2.8rem;
+  }
+
+  .partnerships-hero h1 {
+    font-size: clamp(1.74rem, 9.8vw, 2.2rem);
+  }
+}
+
+@media (max-width: 380px) {
+  .partnerships-hero h1 {
+    font-size: clamp(1.58rem, 10.2vw, 2rem);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .partnerships-main {
+    width: 93vw;
+    padding: 2.4rem 0 3.6rem;
+  }
+
+  .partnerships-hero h1 {
+    font-size: clamp(2.25rem, 5.4vw, 3.25rem);
+  }
+}
+
+.model-tile,
+.partners-block,
+.models-block,
+.propose-block {
+  box-shadow: none;
+}
+
+.model-tile {
+  transition: border-color 0.24s ease;
+}
+
+.model-tile:hover {
+  transform: none;
+  box-shadow: none;
+}
