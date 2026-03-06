@@ -8,24 +8,28 @@
     name="description"
     content="Services by Kilimonet Integrated Agrisystems Limited, from planning and infrastructure to operations and market access."
   />
-  <link rel="icon" type="image/png" href="kilimonet.logo.png" />
-  <link rel="shortcut icon" type="image/png" href="kilimonet.logo.png" />
-  <link rel="apple-touch-icon" href="kilimonet.logo.png" />
+  <link rel="icon" type="image/png" href="kilimonet.icon.png" />
+  <link rel="shortcut icon" type="image/png" href="kilimonet.icon.png" />
+  <link rel="apple-touch-icon" href="kilimonet.icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Playfair+Display:wght@600;700&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="services-page.css" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Playfair+Display:wght@600;700&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" /></noscript>
+  <link rel="stylesheet" href="critical.css" />
+  <link rel="preload" as="style" href="styles.css" />
+  <link href="styles.css" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="styles.css" /></noscript>
+  <link rel="preload" as="style" href="services-page.css" />
+  <link href="services-page.css" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="services-page.css" /></noscript>
 </head>
-<body>
+<body class="page-services">
   <div class="grain"></div>
 
   <header class="site-header">
     <a class="brand" href="index.html#top" aria-label="Kilimonet home">
-      <img class="brand-logo" src="kilimonet.logo.png" alt="Kilimonet Integrated Agrisystems Limited logo" />
+      <img class="brand-logo" src="kilimonet.logo.small.webp" width="160" height="107" decoding="async" alt="Kilimonet Integrated Agrisystems Limited logo" />
       <span class="brand-name">KILIMONET</span>
     </a>
     <nav class="nav" id="main-nav">
@@ -51,7 +55,7 @@
 
     <section class="services-list reveal">
       <article class="service-item">
-        <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1400&q=80" alt="Farm layout planning and construction" />
+        <img src="photo-service-design-construction.webp" srcset="photo-service-design-construction-560.webp 560w, photo-service-design-construction-900.webp 900w, photo-service-design-construction-1200.webp 1200w, photo-service-design-construction.webp 1400w" sizes="(max-width: 980px) 94vw, 40vw" width="1400" height="1866" fetchpriority="high" decoding="async" alt="Farm layout planning and construction" />
         <div>
           <h2>Design &amp; Construction</h2>
           <ul>
@@ -63,7 +67,7 @@
       </article>
 
       <article class="service-item">
-        <img src="https://images.unsplash.com/photo-1598512199776-e4a8f03f5f28?auto=format&fit=crop&w=1400&q=80" alt="Greenhouse and irrigation systems" />
+        <img src="photo-service-greenhouse-irrigation.webp" srcset="photo-service-greenhouse-irrigation-560.webp 560w, photo-service-greenhouse-irrigation-900.webp 900w, photo-service-greenhouse-irrigation-1200.webp 1200w, photo-service-greenhouse-irrigation.webp 1400w" sizes="(max-width: 980px) 94vw, 40vw" width="1400" height="934" loading="lazy" decoding="async" alt="Greenhouse and irrigation systems" />
         <div>
           <h2>Greenhouses &amp; Irrigation</h2>
           <ul>
@@ -75,7 +79,7 @@
       </article>
 
       <article class="service-item">
-        <img src="https://images.unsplash.com/photo-1523741543316-beb7fc7023d8?auto=format&fit=crop&w=1400&q=80" alt="Farmer training session" />
+        <img src="photo-service-training.webp" srcset="photo-service-training-560.webp 560w, photo-service-training-900.webp 900w, photo-service-training-1200.webp 1200w, photo-service-training.webp 1400w" sizes="(max-width: 980px) 94vw, 40vw" width="1400" height="2100" loading="lazy" decoding="async" alt="Farmer training session" />
         <div>
           <h2>Training &amp; Capacity Building</h2>
           <ul>
@@ -87,7 +91,7 @@
       </article>
 
       <article class="service-item">
-        <img src="https://images.unsplash.com/photo-1592982537447-6f2a6a0a05d3?auto=format&fit=crop&w=1400&q=80" alt="Healthy crop seedlings" />
+        <img src="photo-service-seedlings.webp" srcset="photo-service-seedlings-560.webp 560w, photo-service-seedlings-900.webp 900w, photo-service-seedlings-1200.webp 1200w, photo-service-seedlings.webp 1400w" sizes="(max-width: 980px) 94vw, 40vw" width="1400" height="933" loading="lazy" decoding="async" alt="Healthy crop seedlings" />
         <div>
           <h2>Seedlings Supply</h2>
           <ul>
@@ -99,7 +103,7 @@
       </article>
 
       <article class="service-item">
-        <img src="https://images.unsplash.com/photo-1524486361537-8ad15938e1a3?auto=format&fit=crop&w=1400&q=80" alt="Farm management and operations" />
+        <img src="photo-service-management.webp" srcset="photo-service-management-560.webp 560w, photo-service-management-900.webp 900w, photo-service-management-1200.webp 1200w, photo-service-management.webp 1400w" sizes="(max-width: 980px) 94vw, 40vw" width="1400" height="2100" loading="lazy" decoding="async" alt="Farm management and operations" />
         <div>
           <h2>Farm Management Support</h2>
           <ul>
@@ -111,7 +115,7 @@
       </article>
 
       <article class="service-item">
-        <img src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=1400&q=80" alt="Fresh produce market" />
+        <img src="photo-service-marketing.webp" srcset="photo-service-marketing-560.webp 560w, photo-service-marketing-900.webp 900w, photo-service-marketing-1200.webp 1200w, photo-service-marketing.webp 1400w" sizes="(max-width: 980px) 94vw, 40vw" width="1400" height="1054" loading="lazy" decoding="async" alt="Fresh produce market" />
         <div>
           <h2>Marketing (Local &amp; International)</h2>
           <ul>
@@ -123,7 +127,7 @@
       </article>
 
       <article class="service-item">
-        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1400&q=80" alt="Agritech consultancy planning" />
+        <img src="photo-service-consultancy.webp" srcset="photo-service-consultancy-560.webp 560w, photo-service-consultancy-900.webp 900w, photo-service-consultancy-1200.webp 1200w, photo-service-consultancy.webp 1400w" sizes="(max-width: 980px) 94vw, 40vw" width="1400" height="933" loading="lazy" decoding="async" alt="Agritech consultancy planning" />
         <div>
           <h2>Consultancy</h2>
           <ul>
@@ -160,6 +164,14 @@
     </section>
   </main>
 
+  <section class="intake-rail">
+    <div>
+      <h2>Ready to start your project?</h2>
+      <p>Share your goals and location, and we'll prepare the right support plan.</p>
+    </div>
+    <a href="intake.html" class="btn btn-secondary">Start Project Intake</a>
+  </section>
+
   <footer class="site-footer">
     <div class="footer-grid">
       <section class="footer-block">
@@ -175,6 +187,7 @@
           <li><a href="partnerships.html">Partnerships</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li><a href="intake.html">Start Intake</a></li>
         </ul>
       </section>
       <section class="footer-block">
@@ -198,6 +211,6 @@
     <p class="copyright">Kilimonet Integrated Agrisystems Limited<br />Private Limited Company Registered in Kenya<br />Company No: PVT-5M1LBLD2<br />Juja, Kiambu County, Kenya<br /><br />© 2026 Kilimonet. All Rights Reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

@@ -8,10 +8,11 @@
 .partners-block,
 .models-block,
 .propose-block {
-  background: var(--bg-soft);
+  background: linear-gradient(160deg, #ffffff 0%, #f4f9f4 100%);
   border: 1px solid var(--line);
   border-radius: 1rem;
   padding: clamp(1rem, 2vw, 1.5rem);
+  box-shadow: var(--shadow-sm);
 }
 
 .partners-block,
@@ -43,10 +44,11 @@
 }
 
 .model-tile {
-  background: var(--bg-soft);
+  background: linear-gradient(180deg, #ffffff 0%, #f0f8ef 100%);
   border: 1px solid var(--line);
   border-radius: 0.9rem;
   padding: 0.9rem;
+  box-shadow: var(--shadow-sm);
 }
 
 @media (max-width: 980px) {
@@ -103,18 +105,11 @@
   }
 }
 
-.model-tile,
-.partners-block,
-.models-block,
-.propose-block {
-  box-shadow: none;
-}
-
 .model-tile {
-  transition: border-color 0.24s ease;
+  transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
 }
 
 .model-tile:hover {
-  transform: none;
-  box-shadow: none;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }

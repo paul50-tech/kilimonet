@@ -6,16 +6,17 @@
 
 .intake-hero,
 .intake-form-wrap {
-  background: var(--bg-soft);
+  background: linear-gradient(165deg, #ffffff 0%, #f2f9f3 100%);
   border: 1px solid var(--line);
   border-radius: 1rem;
   padding: clamp(1rem, 2vw, 1.5rem);
-  box-shadow: none;
+  box-shadow: var(--shadow-sm);
 }
 
 .intake-form-wrap {
   margin-top: 1.4rem;
-  transition: box-shadow 0.24s ease;
+  box-shadow: var(--shadow-md);
+  transition: box-shadow 0.24s ease, transform 0.24s ease, border-color 0.24s ease;
 }
 
 .intake-hero h1 {
@@ -113,5 +114,7 @@ select:focus {
 }
 
 .intake-form-wrap:focus-within {
-  box-shadow: none;
+  border-color: #9ec5a6;
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-1px);
 }

@@ -6,13 +6,15 @@
 
 .technology-hero,
 .technology-item {
-  background: var(--bg-soft);
+  background: linear-gradient(160deg, #ffffff 0%, #f0f7f2 100%);
   border: 1px solid var(--line);
   border-radius: 1rem;
+  box-shadow: var(--shadow-sm);
 }
 
 .technology-hero {
   padding: clamp(1rem, 2vw, 1.5rem);
+  box-shadow: var(--shadow-md);
 }
 
 .technology-hero h1 {
@@ -34,6 +36,7 @@
 
 .technology-item {
   padding: 1rem;
+  border-left: 4px solid #3d9d61;
 }
 
 .technology-main h2 {
@@ -118,11 +121,10 @@
 }
 
 .technology-item {
-  box-shadow: none;
-  transition: border-color 0.24s ease;
+  transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
 }
 
 .technology-item:hover {
-  transform: none;
-  box-shadow: none;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }

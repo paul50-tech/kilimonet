@@ -11,9 +11,10 @@
 }
 
 .services-hero {
-  background: var(--bg-soft);
+  background: linear-gradient(150deg, #ffffff 0%, #eef7ed 100%);
   border: 1px solid var(--line);
   padding: clamp(1rem, 2vw, 1.5rem);
+  box-shadow: var(--shadow-md);
 }
 
 .services-hero h1 {
@@ -37,9 +38,10 @@
   display: grid;
   grid-template-columns: 0.95fr 1.05fr;
   gap: 1rem;
-  background: var(--bg-soft);
+  background: linear-gradient(180deg, #ffffff 0%, #f5faf4 100%);
   border: 1px solid var(--line);
   padding: 0.85rem;
+  box-shadow: var(--shadow-sm);
 }
 
 .service-item img {
@@ -66,10 +68,11 @@
 
 .quote-cta {
   margin-top: 1.2rem;
-  background: var(--accent);
+  background: linear-gradient(135deg, #1e6a42 0%, #164f32 100%);
   border: 1px solid var(--cta-strong-border);
   padding: clamp(1rem, 2vw, 1.5rem);
   color: var(--white);
+  box-shadow: var(--shadow-lg);
 }
 
 .quote-cta p {
@@ -145,13 +148,12 @@
 }
 
 .service-item {
-  box-shadow: none;
-  transition: border-color 0.24s ease;
+  transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
 }
 
 .service-item:hover {
-  transform: none;
-  box-shadow: none;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 .service-item img {
@@ -159,5 +161,5 @@
 }
 
 .service-item:hover img {
-  transform: none;
+  transform: scale(1.03);
 }

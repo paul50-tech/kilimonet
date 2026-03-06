@@ -8,24 +8,28 @@
     name="description"
     content="Technology solutions by Kilimonet: hydroponics, aeroponics, aquaponics, smart irrigation, farm surveillance, and environment monitoring."
   />
-  <link rel="icon" type="image/png" href="kilimonet.logo.png" />
-  <link rel="shortcut icon" type="image/png" href="kilimonet.logo.png" />
-  <link rel="apple-touch-icon" href="kilimonet.logo.png" />
+  <link rel="icon" type="image/png" href="kilimonet.icon.png" />
+  <link rel="shortcut icon" type="image/png" href="kilimonet.icon.png" />
+  <link rel="apple-touch-icon" href="kilimonet.icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Playfair+Display:wght@600;700&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="technology-page.css" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Playfair+Display:wght@600;700&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" /></noscript>
+  <link rel="stylesheet" href="critical.css" />
+  <link rel="preload" as="style" href="styles.css" />
+  <link href="styles.css" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="styles.css" /></noscript>
+  <link rel="preload" as="style" href="technology-page.css" />
+  <link href="technology-page.css" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="technology-page.css" /></noscript>
 </head>
-<body>
+<body class="page-technology">
   <div class="grain"></div>
 
   <header class="site-header">
     <a class="brand" href="index.html#top" aria-label="Kilimonet home">
-      <img class="brand-logo" src="kilimonet.logo.png" alt="Kilimonet Integrated Agrisystems Limited logo" />
+      <img class="brand-logo" src="kilimonet.logo.small.webp" width="160" height="107" decoding="async" alt="Kilimonet Integrated Agrisystems Limited logo" />
       <span class="brand-name">KILIMONET</span>
     </a>
     <nav class="nav" id="main-nav">
@@ -220,6 +224,14 @@
     </section>
   </main>
 
+  <section class="intake-rail">
+    <div>
+      <h2>Ready to start your project?</h2>
+      <p>Share your goals and location, and we'll prepare the right support plan.</p>
+    </div>
+    <a href="intake.html" class="btn btn-secondary">Start Project Intake</a>
+  </section>
+
   <footer class="site-footer">
     <div class="footer-grid">
       <section class="footer-block">
@@ -235,6 +247,7 @@
           <li><a href="partnerships.html">Partnerships</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li><a href="intake.html">Start Intake</a></li>
         </ul>
       </section>
       <section class="footer-block">
@@ -258,6 +271,6 @@
     <p class="copyright">Kilimonet Integrated Agrisystems Limited<br />Private Limited Company Registered in Kenya<br />Company No: PVT-5M1LBLD2<br />Juja, Kiambu County, Kenya<br /><br />© 2026 Kilimonet. All Rights Reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

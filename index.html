@@ -8,23 +8,26 @@
     name="description"
     content="Kilimonet Integrated Agrisystems Limited delivers integrated agribusiness solutions, modern farming support, and value-chain services across East Africa."
   />
-  <link rel="icon" type="image/png" href="kilimonet.logo.png" />
-  <link rel="shortcut icon" type="image/png" href="kilimonet.logo.png" />
-  <link rel="apple-touch-icon" href="kilimonet.logo.png" />
+  <link rel="icon" type="image/png" href="kilimonet.icon.png" />
+  <link rel="shortcut icon" type="image/png" href="kilimonet.icon.png" />
+  <link rel="apple-touch-icon" href="kilimonet.icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Playfair+Display:wght@600;700&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="preload" as="image" href="photo-hero-greenhouse.webp" imagesrcset="photo-hero-greenhouse-800.webp 800w, photo-hero-greenhouse-1200.webp 1200w, photo-hero-greenhouse.webp 1600w" imagesizes="(max-width: 980px) 94vw, 44vw" fetchpriority="high" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Playfair+Display:wght@600;700&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" /></noscript>
+  <link rel="stylesheet" href="critical.css" />
+  <link rel="preload" as="style" href="styles.css" />
+  <link href="styles.css" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="styles.css" /></noscript>
 </head>
-<body>
+<body class="page-home">
   <div class="grain"></div>
 
   <header class="site-header">
     <a class="brand" href="#top" aria-label="Kilimonet home">
-      <img class="brand-logo" src="kilimonet.logo.png" alt="Kilimonet Integrated Agrisystems Limited logo" />
+      <img class="brand-logo" src="kilimonet.logo.small.webp" width="160" height="107" decoding="async" alt="Kilimonet Integrated Agrisystems Limited logo" />
       <span class="brand-name">KILIMONET</span>
     </a>
     <nav class="nav" id="main-nav">
@@ -54,7 +57,13 @@
       </div>
       <div class="hero-visual">
         <img
-          src="https://images.unsplash.com/photo-1586771107445-d3ca888129ce?auto=format&fit=crop&w=1600&q=80"
+          src="photo-hero-greenhouse.webp"
+          srcset="photo-hero-greenhouse-800.webp 800w, photo-hero-greenhouse-1200.webp 1200w, photo-hero-greenhouse.webp 1600w"
+          sizes="(max-width: 980px) 94vw, 44vw"
+          width="1600"
+          height="1204"
+          fetchpriority="high"
+          decoding="async"
           alt="Modern greenhouse agriculture with monitored crop systems"
         />
       </div>
@@ -250,6 +259,14 @@
     </section>
   </main>
 
+  <section class="intake-rail">
+    <div>
+      <h2>Ready to start your project?</h2>
+      <p>Share your goals and location, and we'll prepare the right support plan.</p>
+    </div>
+    <a href="intake.html" class="btn btn-secondary">Start Project Intake</a>
+  </section>
+
   <footer class="site-footer">
     <div class="footer-grid">
       <section class="footer-block">
@@ -265,6 +282,7 @@
           <li><a href="partnerships.html">Partnerships</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li><a href="intake.html">Start Intake</a></li>
         </ul>
       </section>
       <section class="footer-block">
@@ -288,6 +306,6 @@
     <p class="copyright">Kilimonet Integrated Agrisystems Limited<br />Private Limited Company Registered in Kenya<br />Company No: PVT-5M1LBLD2<br />Juja, Kiambu County, Kenya<br /><br />© 2026 Kilimonet. All Rights Reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

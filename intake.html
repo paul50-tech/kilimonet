@@ -8,24 +8,28 @@
     name="description"
     content="Project intake form for Kilimonet services, technology, marketing, and labour support requests."
   />
-  <link rel="icon" type="image/png" href="kilimonet.logo.png" />
-  <link rel="shortcut icon" type="image/png" href="kilimonet.logo.png" />
-  <link rel="apple-touch-icon" href="kilimonet.logo.png" />
+  <link rel="icon" type="image/png" href="kilimonet.icon.png" />
+  <link rel="shortcut icon" type="image/png" href="kilimonet.icon.png" />
+  <link rel="apple-touch-icon" href="kilimonet.icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Playfair+Display:wght@600;700&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="intake-page.css" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Playfair+Display:wght@600;700&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" /></noscript>
+  <link rel="stylesheet" href="critical.css" />
+  <link rel="preload" as="style" href="styles.css" />
+  <link href="styles.css" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="styles.css" /></noscript>
+  <link rel="preload" as="style" href="intake-page.css" />
+  <link href="intake-page.css" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="intake-page.css" /></noscript>
 </head>
-<body>
+<body class="page-intake">
   <div class="grain"></div>
 
   <header class="site-header">
     <a class="brand" href="index.html#top" aria-label="Kilimonet home">
-      <img class="brand-logo" src="kilimonet.logo.png" alt="Kilimonet Integrated Agrisystems Limited logo" />
+      <img class="brand-logo" src="kilimonet.logo.small.webp" width="160" height="107" decoding="async" alt="Kilimonet Integrated Agrisystems Limited logo" />
       <span class="brand-name">KILIMONET</span>
     </a>
     <nav class="nav" id="main-nav">
@@ -111,6 +115,7 @@
           <li><a href="partnerships.html">Partnerships</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li><a href="intake.html">Start Intake</a></li>
         </ul>
       </section>
       <section class="footer-block">
@@ -134,7 +139,7 @@
     <p class="copyright">Kilimonet Integrated Agrisystems Limited<br />Private Limited Company Registered in Kenya<br />Company No: PVT-5M1LBLD2<br />Juja, Kiambu County, Kenya<br /><br />© 2026 Kilimonet. All Rights Reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
-  <script src="intake.js"></script>
+  <script src="script.js" defer></script>
+  <script src="intake.js" defer></script>
 </body>
 </html>
