@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Assist | Kilimonet Integrated Agrisystems Limited</title>
+  <meta
+    name="description"
+    content="Smart farmer assistance by Kilimonet: crop diagnosis, nearest agrovet matching, specialist support, and admin updates for stock and advisories."
+  />
+  <link rel="icon" type="image/png" href="kilimonet.icon.png" />
+  <link rel="shortcut icon" type="image/png" href="kilimonet.icon.png" />
+  <link rel="apple-touch-icon" href="kilimonet.icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Playfair+Display:wght@600;700&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" /></noscript>
+  <link rel="stylesheet" href="critical.css" />
+  <link rel="preload" as="style" href="styles.css" />
+  <link href="styles.css" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="styles.css" /></noscript>
+  <link rel="preload" as="style" href="smart-assist-page.css" />
+  <link href="smart-assist-page.css" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="smart-assist-page.css" /></noscript>
+</head>
+<body class="page-services">
+  <div class="grain"></div>
+
+  <header class="site-header">
+    <a class="brand" href="index.html#top" aria-label="Kilimonet home">
+      <img class="brand-logo" src="kilimonet.logo.small.webp" width="160" height="107" decoding="async" alt="Kilimonet Integrated Agrisystems Limited logo" />
+      <span class="brand-name">KILIMONET</span>
+    </a>
+    <nav class="nav" id="main-nav">
+      <a href="index.html#top">Home</a>
+      <a href="services.html">Services</a>
+      <a href="technology.html">Technology</a>
+      <a href="smart-assist.html">Smart Assist</a>
+      <a href="partnerships.html">Partnerships</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-controls">
+      <a href="intake.html" class="btn btn-primary header-cta">Get Started</a>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" type="button">&#9776;</button>
+    </div>
+  </header>
+
+  <main class="smart-main">
+    <section class="smart-hero reveal">
+      <p class="eyebrow">Farmer-Specialist-Agrovet Smart Connection</p>
+      <h1>Smart Farmer Assistance Module</h1>
+      <p>Upload crop images, receive diagnosis and recommendations, find nearby agrovets with stock, and connect with agricultural specialists.</p>
+    </section>
+
+    <section class="smart-grid">
+      <article class="smart-panel reveal">
+        <h2>1. Crop Diagnosis Tool</h2>
+        <form id="diagnosis-form" class="contact-form full" action="#" method="post" novalidate>
+          <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <label>
+            Upload crop image
+            <input id="crop-image" type="file" accept="image/*" required />
+          </label>
+          <label>
+            Capture with camera
+            <input id="crop-camera" type="file" accept="image/*" capture="environment" />
+          </label>
+          <label>
+            Crop type (optional)
+            <input id="crop-type" type="text" name="crop_type" placeholder="e.g. tomato, maize, cabbage" />
+          </label>
+          <label>
+            Location (optional)
+            <input id="farmer-location" type="text" name="location" placeholder="County or village" />
+          </label>
+          <label>
+            Symptoms (optional)
+            <textarea id="symptoms" name="symptoms" rows="3" placeholder="Describe spots, wilting, yellowing, pests..." ></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary">Analyze Crop Issue</button>
+        </form>
+        <div id="image-preview-wrap" class="image-preview-wrap" hidden>
+          <img id="image-preview" alt="Selected crop preview" />
+          <p id="image-meta"></p>
+        </div>
+        <div id="diagnosis-result" class="result-card" hidden></div>
+      </article>
+
+      <article class="smart-panel reveal">
+        <h2>2. Nearest Agrovet Finder</h2>
+        <div class="finder-controls">
+          <button id="detect-location-btn" class="btn btn-secondary" type="button">Use My Location</button>
+          <p id="location-status" class="meta-text">Location not yet detected.</p>
+        </div>
+        <div id="recommended-products" class="chip-list"></div>
+        <div id="agrovet-list" class="stack-list"></div>
+      </article>
+    </section>
+
+    <section class="smart-panel reveal">
+      <h2>3. Specialist Support</h2>
+      <div id="specialist-list" class="specialist-grid"></div>
+      <form id="consultation-form" class="contact-form full" action="#" method="post" novalidate>
+        <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <label>
+          Farmer name
+          <input type="text" id="consult-name" required />
+        </label>
+        <label>
+          Phone or Email
+          <input type="text" id="consult-contact" required />
+        </label>
+        <label>
+          County / Region
+          <input type="text" id="consult-county" required />
+        </label>
+        <label>
+          Preferred consultation mode
+          <select id="consult-mode" required>
+            <option value="">Select mode</option>
+            <option value="call">Call</option>
+            <option value="chat">Chat</option>
+            <option value="appointment">Scheduled Appointment</option>
+          </select>
+        </label>
+        <label>
+          Case details
+          <textarea id="consult-details" rows="4" required placeholder="Share the crop issue and any urgency."></textarea>
+        </label>
+        <button class="btn btn-primary" type="submit">Request Specialist Consultation</button>
+      </form>
+      <p id="consult-feedback" class="feedback" hidden></p>
+    </section>
+
+    <section class="smart-grid">
+      <article class="smart-panel reveal">
+        <h2>Advisories & Alerts</h2>
+        <div id="advisory-list" class="stack-list"></div>
+      </article>
+
+      <article class="smart-panel reveal">
+        <h2>4. Admin Access</h2>
+        <div id="admin-auth-wrap">
+          <form id="admin-login-form" class="contact-form full" action="#" method="post">
+            <label>
+              Username
+              <input type="text" id="admin-username" required />
+            </label>
+            <label>
+              Password
+              <input type="password" id="admin-password" required />
+            </label>
+            <button class="btn btn-primary" type="submit">Sign In</button>
+          </form>
+          <p class="meta-text">Demo roles: <code>agrovetadmin / Agrovet@123</code>, <code>specialistadmin / Specialist@123</code>, <code>systemadmin / SysAdmin@123</code></p>
+          <p id="admin-login-feedback" class="feedback" hidden></p>
+        </div>
+
+        <div id="admin-dashboard" hidden>
+          <div class="admin-head">
+            <p id="admin-role-label"></p>
+            <button id="admin-logout" type="button" class="btn btn-secondary">Logout</button>
+          </div>
+
+          <section id="agrovet-admin-panel" class="admin-section" hidden>
+            <h3>Agrovet Admin</h3>
+            <form id="agrovet-stock-form" class="contact-form full" action="#" method="post">
+              <label>
+                Select agrovet
+                <select id="agrovet-select" required></select>
+              </label>
+              <label>
+                Product name
+                <input type="text" id="product-name" required />
+              </label>
+              <label>
+                Stock quantity
+                <input type="number" id="product-stock" min="0" required />
+              </label>
+              <label>
+                Price (KES)
+                <input type="number" id="product-price" min="0" step="1" required />
+              </label>
+              <button class="btn btn-primary" type="submit">Update Stock</button>
+            </form>
+
+            <form id="agrovet-notice-form" class="contact-form full" action="#" method="post">
+              <label>
+                Notice title
+                <input type="text" id="agrovet-notice-title" required />
+              </label>
+              <label>
+                Notice message
+                <textarea id="agrovet-notice-body" rows="3" required></textarea>
+              </label>
+              <button class="btn btn-secondary" type="submit">Publish Agrovet Notice</button>
+            </form>
+          </section>
+
+          <section id="specialist-admin-panel" class="admin-section" hidden>
+            <h3>Specialist Admin</h3>
+            <form id="specialist-update-form" class="contact-form full" action="#" method="post">
+              <label>
+                Select specialist
+                <select id="specialist-select" required></select>
+              </label>
+              <label>
+                Availability status
+                <select id="specialist-availability" required>
+                  <option value="available">Available</option>
+                  <option value="busy">Busy</option>
+                  <option value="offline">Offline</option>
+                </select>
+              </label>
+              <button class="btn btn-primary" type="submit">Update Availability</button>
+            </form>
+
+            <form id="specialist-advisory-form" class="contact-form full" action="#" method="post">
+              <label>
+                Advisory title
+                <input type="text" id="specialist-advisory-title" required />
+              </label>
+              <label>
+                Advisory message
+                <textarea id="specialist-advisory-body" rows="3" required></textarea>
+              </label>
+              <label>
+                County/Region
+                <input type="text" id="specialist-advisory-region" placeholder="Optional target region" />
+              </label>
+              <button class="btn btn-secondary" type="submit">Publish Specialist Advisory</button>
+            </form>
+          </section>
+
+          <p id="admin-feedback" class="feedback" hidden></p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <section class="intake-rail">
+    <div>
+      <h2>Need full project implementation support?</h2>
+      <p>Submit your project intake and Kilimonet will coordinate next steps.</p>
+    </div>
+    <a href="intake.html" class="btn btn-secondary">Start Project Intake</a>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <section class="footer-block">
+        <h3>Mission</h3>
+        <p>Smart technology and practical solutions powering modern farming.</p>
+      </section>
+      <section class="footer-block">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html#top">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="technology.html">Technology</a></li>
+          <li><a href="smart-assist.html">Smart Assist</a></li>
+          <li><a href="partnerships.html">Partnerships</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="intake.html">Start Intake</a></li>
+        </ul>
+      </section>
+      <section class="footer-block">
+        <h3>Contact Details</h3>
+        <ul class="footer-links">
+          <li><a href="mailto:kilimonetinagrtech@gmail.com">kilimonetinagrtech@gmail.com</a></li>
+          <li><a href="tel:+254798981760">+254798981760</a></li>
+          <li>Nairobi, Kenya</li>
+        </ul>
+      </section>
+      <section class="footer-block">
+        <h3>Social</h3>
+        <ul class="footer-links">
+          <li><a href="https://wa.me/254798981760" target="_blank" rel="noreferrer">WhatsApp</a></li>
+          <li><a href="https://facebook.com/" target="_blank" rel="noreferrer">Facebook</a></li>
+          <li><a href="https://linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a></li>
+          <li><a href="https://instagram.com/" target="_blank" rel="noreferrer">Instagram</a></li>
+        </ul>
+      </section>
+    </div>
+    <p class="copyright">Kilimonet Integrated Agrisystems Limited<br />Private Limited Company Registered in Kenya<br />Company No: PVT-5M1LBLD2<br />Juja, Kiambu County, Kenya<br /><br />© 2026 Kilimonet. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+  <script src="smart-assist.js" defer></script>
+</body>
+</html>
